@@ -1,0 +1,19 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+# .env
+
+# Logs
+*.log
+
+# PHP dependencies (if using Composer)
+vendor/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp
