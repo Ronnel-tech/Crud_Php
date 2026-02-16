@@ -7,8 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to the CRUD Application</h1>sebgakjegnaebg;oae
+    <h1>Welcome to the CRUD Application</h1>
     <?php 
+    
     ?>
 </body>
 </html>
