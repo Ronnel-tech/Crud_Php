@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to the CRUD Application</h1>wafasfasfasfasga
+    <h1>Welcome to the CRUD Application</h1>
     <?php 
 
     ?>
