@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@layer theme {
+  :root {
+    --font-bitcount-grid-double: 'Bitcount Grid Double', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-bitcount-grid-double {
+    font-family: 'Bitcount Grid Double', sans-serif;
+  }
+}

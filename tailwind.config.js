@@ -7,7 +7,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'bitcount-grid-double': ['Bitcount Grid Double', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
