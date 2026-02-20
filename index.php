@@ -60,14 +60,18 @@
                 </form>
 
                 <div id="buttons" name = "buttons" class="flex justify-end gap-4 flex-wrap">
-                    <button type="submit" name="add_record" class="bg-blue-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-blue-600 transition duration-300">Insert</button>
+                    <button type="submit" name="add_record"    class="bg-blue-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-blue-600 transition duration-300">Insert</button>
                     <button type="submit" name="update_record" class="bg-green-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-green-600 transition duration-300">Update</button>
-                    <button class="bg-red-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-red-600 transition duration-300">Delete</button>
+                    <button type="submit" name="delete_record" class="bg-red-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-red-600 transition duration-300">Delete</button>
                 </div>
             </div>
 
+
+
         </section>
 
+
+            <!-- Table Section -->
 
         <section id= "table-content" class= "w-3/5 h-full bg-[#1c2029] rounded-3xl p-2 outline-1 outline-offset-2 outline-gray-500 shadow-2xl shadow-blue-950 flex flex-col">
             
@@ -76,6 +80,7 @@
             <div class="w-full flex-1 bg-[#101829] rounded-3xl outline-1 outline-offset-2 outline-gray-500 p-1 shadow-inner shadow-blue-950">
 
                 <table class="w-full flex-1 border border-separate  border-gray-400 table-auto border-spacing-2 overflow-hidden rounded-3xl">
+                    
                     <thead class="bg-[#1c2029]">
                         <tr>
                             <th class="text-white font-bitcount-grid-double border-separate border border-gray-400 rounded-tl-2xl">ID</th>
@@ -92,14 +97,16 @@
                     <tbody>
                         <tr>
                             <td></td>
-                        </tr>
+                        </tr>   
                     </tbody>
+                    
                 </table>
 
             </div>
 
         </section>
     
-    </div> 
+    </div>
+
 </body>
 </html>
