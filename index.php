@@ -84,7 +84,7 @@
 
             <div class="w-full flex-1 bg-[#101829] rounded-3xl outline-1 outline-offset-2 outline-gray-500 p-1 shadow-inner shadow-blue-950  overflow-scroll overflow-x-hidden rounded-b-none">
 
-                <table class="w-full overflow-hidden flex-1 border border-separate  border-gray-400 table-auto border-spacing-2 rounded-3xl rounded-b-none ">
+                <table class="w-full overflow-hidden flex-1 border border-separate  border-gray-400 table-auto border-spacing-2 rounded-3xl rounded-b-none">
                     
                     <thead class="bg-[#1c2029]">
                         <tr>
