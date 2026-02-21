@@ -20,7 +20,18 @@
 }
 
 @layer components {
-    .btn-primary {
-        @apply bg-red-500 text-white rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-red-600 transition duration-300;
-}
+    .btn-primary 
+      {
+        @apply text-white rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-blue-600 transition duration-300;
+      }
+
+    .text-primary 
+      {
+        @apply p-1  text-white text-sm  outline outline-offset-2 outline-gray-500 rounded-3xl  pl-3 pr-3 accent-blue-500;
+      }
+    .tble-primary
+    {
+      @apply text-white border-separate border border-gray-400;
+    }
+
 }

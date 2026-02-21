@@ -25,31 +25,31 @@
                     <!-- FIrst Name Input -->
                     <div class="flex flex-col mb-3">
                         <label for="last_name" class="font-bitcount-grid-double text-white mb-2">Last Name</label>
-                        <input name="last_name" type="text"  id="last_name"  placeholder="Enter your Last Name" class="p-1  text-white text-sm bg-[#1c2029] outline outline-offset-2 outline-gray-500 font-bitcount-grid-double rounded-3xl accent-blue-500 pl-3 pr-3 ">
+                        <input name="last_name" type="text"  id="last_name"  placeholder="Enter your Last Name" class="text-primary  bg-[#1c2029] font-bitcount-grid-double">
                     </div>
 
                     <!-- Last Name Input -->
                     <div class="flex flex-col mb-3">
                         <label for="first_name" class="font-bitcount-grid-double text-white mb-2">First Name</label>
-                        <input name="first_name" type="text"  id="first_name"  placeholder="Enter your First Name" class="p-1  text-white text-sm bg-[#1c2029] outline outline-offset-2 outline-gray-500 font-bitcount-grid-double rounded-3xl accent-blue-300 pl-3 pr-3 ">
+                        <input name="first_name" type="text"  id="first_name"  placeholder="Enter your First Name" class="text-primary  bg-[#1c2029] font-bitcount-grid-double">
                     </div>
 
                     <!-- Email -->
                     <div class="flex flex-col mb-3">
                         <label for="email" class="font-bitcount-grid-double text-white mb-2">Email</label>
-                        <input name="email" type="text"  id="email"  placeholder="Enter your Email" class="p-1  text-white text-sm bg-[#1c2029] outline outline-offset-2 outline-gray-500 font-bitcount-grid-double rounded-3xl accent-blue-300 pl-3 pr-3">
+                        <input name="email" type="text"  id="email"  placeholder="Enter your Email" class="text-primary bg-[#1c2029] font-bitcount-grid-double">
                     </div>
                     <!-- Address -->
                     <div class="flex flex-col mb-3">
                         <label for="address" class="font-bitcount-grid-double text-white mb-2">Address</label>
-                        <input name="address" type="text" id="address"  placeholder="Enter your Address" class="p-1  text-white text-sm bg-[#1c2029] outline outline-offset-2 outline-gray-500 font-bitcount-grid-double rounded-3xl accent-blue-300 pl-3 pr-3">
+                        <input name="address" type="text" id="address"  placeholder="Enter your Address" class="text-primary bg-[#1c2029] font-bitcount-grid-double">
                     </div>
 
                     <!-- Gender -->
                     <div class="flex flex-col mb-3">
                         <label for="gender" class="font-bitcount-grid-double text-white mb-2">Gender</label>
                         
-                        <select name="gender" id="gender" class="p-1  text-white text-sm bg-[#1c2029] outline outline-offset-2 outline-gray-500 font-bitcount-grid-double rounded-3xl accent-blue-300 pl-3 pr-3">
+                        <select name="gender" id="gender" class="text-primary  bg-[#1c2029] font-bitcount-grid-double">
                             <option value="">Select gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
@@ -59,9 +59,9 @@
 
                     <div id="buttons" name = "buttons" class="flex justify-end gap-4 flex-wrap">
 
-                        <button type="submit" name="add_record"    class="bg-blue-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-blue-600 transition duration-300">Insert</button>
-                        <button type="submit" name="update_record" class="bg-green-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-green-600 transition duration-300">Update</button>
-                        <button type="submit" name="delete_record" class="bg-red-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-red-600 transition duration-300">Delete</button>
+                        <button type="submit" name="add_record"    class="btn-primary bg-blue-500 font-bitcount-grid-double">Insert</button>
+                        <button type="submit" name="update_record" class="btn-primary bg-green-500 font-bitcount-grid-double">Update</button>
+                        <button type="submit" name="delete_record" class="btn-primary bg-red-500 font-bitcount-grid-double">Delete</button>
 
                     </div>
                             
@@ -88,12 +88,12 @@
                     
                     <thead class="bg-[#1c2029]">
                         <tr>
-                            <th class="text-white font-bitcount-grid-double border-separate border border-gray-400 rounded-tl-2xl">ID</th>
-                            <th class="text-white font-bitcount-grid-double border-separate border border-gray-400">Last Name</th>
-                            <th class="text-white font-bitcount-grid-double border-separate border border-gray-400">First Name</th>
-                            <th class="text-white font-bitcount-grid-double border-separate border border-gray-400">Email</th>
-                            <th class="text-white font-bitcount-grid-double border-separate border border-gray-400">Address</th>
-                            <th class="text-white font-bitcount-grid-double border-separate border border-gray-400 rounded-tr-2xl">Gender</th>
+                            <th class="tble-primary font-bitcount-grid-double rounded-tl-2xl">ID</th>
+                            <th class="tble-primary font-bitcount-grid-double ">Last Name</th>
+                            <th class="tble-primary font-bitcount-grid-double ">First Name</th>
+                            <th class="tble-primary font-bitcount-grid-double ">Email</th>
+                            <th class="tble-primary font-bitcount-grid-double ">Address</th>
+                            <th class="tble-primary font-bitcount-grid-double rounded-tr-2xl">Gender</th>
 
                         </tr>
 
@@ -105,17 +105,16 @@
                     <?php require('pages/display.php') ?>
                     <?php foreach ($rows as $row): ?>
 
-
                         <tr>
-                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['id'] ?>             </td>
-                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_last_name'] ?> </td>
-                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_first_name'] ?></td>
-                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_email'] ?>     </td>
-                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_address'] ?>   </td>
-                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_gender'] ?>    </td>
+                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['id'] ?>             </td>
+                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_last_name'] ?> </td>
+                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_first_name'] ?></td>
+                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_email'] ?>     </td>
+                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_address'] ?>   </td>
+                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_gender'] ?>    </td>
                         </tr>   
 
-                
+
                     <?php endforeach; ?>
 
                     </tbody>
