@@ -91,6 +91,7 @@
                             <th class="text-white font-bitcount-grid-double border-separate border border-gray-400 rounded-tr-2xl">Gender</th>
 
                         </tr>
+
                     </thead>
 
 
@@ -99,7 +100,7 @@
                             <td></td>
                         </tr>   
                     </tbody>
-                    
+
                 </table>
 
             </div>
