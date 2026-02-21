@@ -11,6 +11,8 @@
 
     <title>TEST</title>
 </head>
+
+<script src="./assets/js/main.js"></script>
 <body>
 
     <div id= "container" class = "h-screen bg-[#030712] flex p-30 gap-5">
@@ -105,13 +107,13 @@
                     <?php require('pages/display.php') ?>
                     <?php foreach ($rows as $row): ?>
 
-                        <tr>
-                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['id'] ?>             </td>
-                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_last_name'] ?> </td>
-                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_first_name'] ?></td>
-                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_email'] ?>     </td>
-                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_address'] ?>   </td>
-                            <td class="tble-primary font-bitcount-grid-double">  <?= $row['crud_gender'] ?>    </td>
+                        <tr class="clickable-row">
+                            <td class="tble-primary font-bitcount-grid-double" id = "id"           > <?= $row['id'] ?>             </td>
+                            <td class="tble-primary font-bitcount-grid-double" id="crud_last_name" > <?= $row['crud_last_name'] ?> </td>
+                            <td class="tble-primary font-bitcount-grid-double" id="crud_first_name"> <?= $row['crud_first_name'] ?></td>
+                            <td class="tble-primary font-bitcount-grid-double" id="crud_email"     > <?= $row['crud_email'] ?>     </td>
+                            <td class="tble-primary font-bitcount-grid-double" id="crud_address"   > <?= $row['crud_address'] ?>   </td>
+                            <td class="tble-primary font-bitcount-grid-double" id="crud_gender"    > <?= $row['crud_gender'] ?>    </td>
                         </tr>   
 
 
