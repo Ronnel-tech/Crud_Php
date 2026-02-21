@@ -20,7 +20,7 @@
             <h1 class=" text-white font-bitcount-grid-double mb-2 pt-2">Add Record</h1>
 
             <div class="w-full flex-1 bg-[#101829] rounded-3xl outline-1 outline-offset-2 outline-gray-500 p-5">
-                <form action="" method="post">
+                <form action="pages/insert.php" method="post">
 
                     <!-- FIrst Name Input -->
                     <div class="flex flex-col mb-3">
@@ -56,14 +56,19 @@
                             <option value="other">Others</option>
                         </select>
                     </div>
-            
+
+                    <div id="buttons" name = "buttons" class="flex justify-end gap-4 flex-wrap">
+
+                        <button type="submit" name="add_record"    class="bg-blue-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-blue-600 transition duration-300">Insert</button>
+                        <button type="submit" name="update_record" class="bg-green-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-green-600 transition duration-300">Update</button>
+                        <button type="submit" name="delete_record" class="bg-red-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-red-600 transition duration-300">Delete</button>
+
+                    </div>
+                            
                 </form>
 
-                <div id="buttons" name = "buttons" class="flex justify-end gap-4 flex-wrap">
-                    <button type="submit" name="add_record"    class="bg-blue-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-blue-600 transition duration-300">Insert</button>
-                    <button type="submit" name="update_record" class="bg-green-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-green-600 transition duration-300">Update</button>
-                    <button type="submit" name="delete_record" class="bg-red-500 text-white font-bitcount-grid-double rounded-3xl p-2 pl-4 pr-4 mt-5 hover:bg-red-600 transition duration-300">Delete</button>
-                </div>
+
+
             </div>
 
 
@@ -73,13 +78,13 @@
 
             <!-- Table Section -->
 
-        <section id= "table-content" class= "w-3/5 h-full bg-[#1c2029] rounded-3xl p-2 outline-1 outline-offset-2 outline-gray-500 shadow-2xl shadow-blue-950 flex flex-col">
+        <section id= "table-content" class= "w-3/5 h-full bg-[#1c2029] rounded-3xl p-2 outline-1 outline-offset-2 outline-gray-500 shadow-2xl shadow-blue-950 flex flex-col overflow-hidden rounded-b-none">
             
             <h1 class=" text-white font-bitcount-grid-double mb-2 pt-2">Table Content</h1>
 
-            <div class="w-full flex-1 bg-[#101829] rounded-3xl outline-1 outline-offset-2 outline-gray-500 p-1 shadow-inner shadow-blue-950">
+            <div class="w-full flex-1 bg-[#101829] rounded-3xl outline-1 outline-offset-2 outline-gray-500 p-1 shadow-inner shadow-blue-950  overflow-scroll overflow-x-hidden rounded-b-none">
 
-                <table class="w-full flex-1 border border-separate  border-gray-400 table-auto border-spacing-2 overflow-hidden rounded-3xl rounded-b-none ">
+                <table class="w-full overflow-hidden flex-1 border border-separate  border-gray-400 table-auto border-spacing-2 rounded-3xl rounded-b-none ">
                     
                     <thead class="bg-[#1c2029]">
                         <tr>
