@@ -79,7 +79,7 @@
 
             <div class="w-full flex-1 bg-[#101829] rounded-3xl outline-1 outline-offset-2 outline-gray-500 p-1 shadow-inner shadow-blue-950">
 
-                <table class="w-full flex-1 border border-separate  border-gray-400 table-auto border-spacing-2 overflow-hidden rounded-3xl">
+                <table class="w-full flex-1 border border-separate  border-gray-400 table-auto border-spacing-2 overflow-hidden rounded-3xl rounded-b-none ">
                     
                     <thead class="bg-[#1c2029]">
                         <tr>
@@ -96,9 +96,23 @@
 
 
                     <tbody>
+
+                    <?php require('pages/display.php') ?>
+                    <?php foreach ($rows as $row): ?>
+
+
                         <tr>
-                            <td></td>
+                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['id'] ?>             </td>
+                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_last_name'] ?> </td>
+                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_first_name'] ?></td>
+                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_email'] ?>     </td>
+                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_address'] ?>   </td>
+                            <td class="text-white font-bitcount-grid-double border-separate border border-gray-400">  <?= $row['crud_gender'] ?>    </td>
                         </tr>   
+
+                
+                    <?php endforeach; ?>
+
                     </tbody>
 
                 </table>
@@ -108,6 +122,10 @@
         </section>
     
     </div>
+    
+
+    
+
 
 </body>
 </html>
