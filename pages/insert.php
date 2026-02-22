@@ -1,5 +1,6 @@
 <?php 
-    require('../config/database.php');
+session_start();
+require('../config/database.php');
 
     if(isset($_POST['add_record']))
         {
@@ -22,7 +23,9 @@
                 }
                 else 
                     {
-                        echo "<script>alert('Please fill in all fields!');</script>";
+                        $_SESSION['alert'] = "Please fill in all fields!";
+                        header("Location: ../index.php");
+                        exit();
                     }
         }   
 ?>

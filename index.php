@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION['alert'])) {
+    echo "<script>alert('{$_SESSION['alert']}');</script>";
+    unset($_SESSION['alert']); // Clear it after displaying
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +20,9 @@
 
     <title>TEST</title>
 </head>
+    <script src="./assets/js/main.js"></script>
 
-<script src="./assets/js/main.js"></script>
+
 <body>
 
     <div id= "container" class = "h-screen bg-[#030712] flex p-30 gap-5">
@@ -25,6 +35,8 @@
                 <form action="pages/insert.php" method="post">
 
                     <!-- FIrst Name Input -->
+                     <input type="hidden" name="id" id="id">
+                     
                     <div class="flex flex-col mb-3">
                         <label for="last_name" class="font-bitcount-grid-double text-white mb-2">Last Name</label>
                         <input name="last_name" type="text"  id="last_name"  placeholder="Enter your Last Name" class="text-primary  bg-[#1c2029] font-bitcount-grid-double">
@@ -50,7 +62,6 @@
                     <!-- Gender -->
                     <div class="flex flex-col mb-3">
                         <label for="gender" class="font-bitcount-grid-double text-white mb-2">Gender</label>
-                        
                         <select name="gender" id="gender" class="text-primary  bg-[#1c2029] font-bitcount-grid-double">
                             <option value="">Select gender</option>
                             <option value="male">Male</option>
@@ -58,13 +69,11 @@
                             <option value="other">Others</option>
                         </select>
                     </div>
-
+                    <!-- Buttons -->
                     <div id="buttons" name = "buttons" class="flex justify-end gap-4 flex-wrap">
-
                         <button type="submit" name="add_record"    class="btn-primary bg-blue-500 font-bitcount-grid-double">Insert</button>
                         <button type="submit" name="update_record" class="btn-primary bg-green-500 font-bitcount-grid-double">Update</button>
                         <button type="submit" name="delete_record" class="btn-primary bg-red-500 font-bitcount-grid-double">Delete</button>
-
                     </div>
                             
                 </form>
@@ -108,12 +117,12 @@
                     <?php foreach ($rows as $row): ?>
 
                         <tr class="clickable-row">
-                            <td class="tble-primary font-bitcount-grid-double" id = "id"           > <?= $row['id'] ?>             </td>
-                            <td class="tble-primary font-bitcount-grid-double" id="crud_last_name" > <?= $row['crud_last_name'] ?> </td>
-                            <td class="tble-primary font-bitcount-grid-double" id="crud_first_name"> <?= $row['crud_first_name'] ?></td>
-                            <td class="tble-primary font-bitcount-grid-double" id="crud_email"     > <?= $row['crud_email'] ?>     </td>
-                            <td class="tble-primary font-bitcount-grid-double" id="crud_address"   > <?= $row['crud_address'] ?>   </td>
-                            <td class="tble-primary font-bitcount-grid-double" id="crud_gender"    > <?= $row['crud_gender'] ?>    </td>
+                            <td class="tble-primary font-bitcount-grid-double" > <?= $row['id'] ?>             </td>
+                            <td class="tble-primary font-bitcount-grid-double" > <?= $row['crud_last_name'] ?> </td>
+                            <td class="tble-primary font-bitcount-grid-double" > <?= $row['crud_first_name'] ?></td>
+                            <td class="tble-primary font-bitcount-grid-double" > <?= $row['crud_email'] ?>     </td>
+                            <td class="tble-primary font-bitcount-grid-double" > <?= $row['crud_address'] ?>   </td>
+                            <td class="tble-primary font-bitcount-grid-double" > <?= $row['crud_gender'] ?>    </td>
                         </tr>   
 
 
