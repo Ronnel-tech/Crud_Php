@@ -32,34 +32,45 @@ if (isset($_SESSION['alert'])) {
             <h1 class=" text-white font-bitcount-grid-double mb-2 pt-2">Add Record</h1>
 
             <div class="w-full flex-1 bg-[#101829] rounded-3xl outline-1 outline-offset-2 outline-gray-500 p-5">
+
+                <!-- -------------------------------------------------FORM START------------------------------------------------------------------>
                 <form action="pages/insert.php" method="post">
 
                     <!-- FIrst Name Input -->
                      <input type="hidden" name="id" id="id">
-                     
+                    
+                     <!-- -------------------------------------------------LAST_NAME START------------------------------------------------------->
                     <div class="flex flex-col mb-3">
                         <label for="last_name" class="font-bitcount-grid-double text-white mb-2">Last Name</label>
                         <input name="last_name" type="text"  id="last_name"  placeholder="Enter your Last Name" class="text-primary  bg-[#1c2029] font-bitcount-grid-double">
                     </div>
+                    <!-- -------------------------------------------------LAST_NAME END-------------------------------------------------------->
 
-                    <!-- Last Name Input -->
+
+                    <!-- -------------------------------------------------FIRST_NAME START------------------------------------------------------->
                     <div class="flex flex-col mb-3">
                         <label for="first_name" class="font-bitcount-grid-double text-white mb-2">First Name</label>
                         <input name="first_name" type="text"  id="first_name"  placeholder="Enter your First Name" class="text-primary  bg-[#1c2029] font-bitcount-grid-double">
                     </div>
+                    <!-- -------------------------------------------------FIRST_NAME END-------------------------------------------------------->
 
-                    <!-- Email -->
+
+                    <!-- -------------------------------------------------EMAIL Start----------------------------------------------------------->
                     <div class="flex flex-col mb-3">
                         <label for="email" class="font-bitcount-grid-double text-white mb-2">Email</label>
                         <input name="email" type="text"  id="email"  placeholder="Enter your Email" class="text-primary bg-[#1c2029] font-bitcount-grid-double">
                     </div>
-                    <!-- Address -->
+                    <!-- -------------------------------------------------EMAIL END--------------------------------------------------------------->
+
+                    <!-- -------------------------------------------------ADDRESS Start----------------------------------------------------------->
                     <div class="flex flex-col mb-3">
                         <label for="address" class="font-bitcount-grid-double text-white mb-2">Address</label>
                         <input name="address" type="text" id="address"  placeholder="Enter your Address" class="text-primary bg-[#1c2029] font-bitcount-grid-double">
                     </div>
 
-                    <!-- Gender -->
+                    <!-- -------------------------------------------------ADDRESS END------------------------------------------------------------>
+
+                    <!-- -------------------------------------------------GENDER Start----------------------------------------------------------->
                     <div class="flex flex-col mb-3">
                         <label for="gender" class="font-bitcount-grid-double text-white mb-2">Gender</label>
                         <select name="gender" id="gender" class="text-primary  bg-[#1c2029] font-bitcount-grid-double">
@@ -69,14 +80,18 @@ if (isset($_SESSION['alert'])) {
                             <option value="other">Others</option>
                         </select>
                     </div>
-                    <!-- Buttons -->
+                    <!-- -------------------------------------------------GENDER END-------------------------------------------------------------->
+
+                    <!-- -------------------------------------------------Buttons Start----------------------------------------------------------->
                     <div id="buttons" name = "buttons" class="flex justify-end gap-4 flex-wrap">
                         <button type="submit" name="add_record"    class="btn-primary bg-blue-500 font-bitcount-grid-double">Insert</button>
                         <button type="submit" name="update_record" class="btn-primary bg-green-500 font-bitcount-grid-double">Update</button>
                         <button type="submit" name="delete_record" class="btn-primary bg-red-500 font-bitcount-grid-double">Delete</button>
                     </div>
-                            
+                    <!-- -------------------------------------------------Buttons END----------------------------------------------------------->
+
                 </form>
+                <!-- -------------------------------------------------FORM END------------------------------------------------------------------>
 
 
 
@@ -87,16 +102,19 @@ if (isset($_SESSION['alert'])) {
         </section>
 
 
-            <!-- Table Section -->
+            <!-- -------------------------------------------------TABLE SECTION START------------------------------------------------------------------>
 
         <section id= "table-content" class= "w-3/5 h-full bg-[#1c2029] rounded-3xl p-2 outline-1 outline-offset-2 outline-gray-500 shadow-2xl shadow-blue-950 flex flex-col overflow-hidden rounded-b-none">
             
             <h1 class=" text-white font-bitcount-grid-double mb-2 pt-2">Table Content</h1>
 
             <div class="w-full flex-1 bg-[#101829] rounded-3xl outline-1 outline-offset-2 outline-gray-500 p-1 shadow-inner shadow-blue-950  overflow-scroll overflow-x-hidden rounded-b-none">
+                
 
+                <!-- -------------------------------------------------TABLE START------------------------------------------------------------------>
                 <table class="w-full overflow-hidden flex-1 border border-separate  border-gray-400 table-auto border-spacing-2 rounded-3xl rounded-b-none">
-                    
+
+                    <!-- -------------------------------------------------TABLE HEAD START--------------------------------------------------------->
                     <thead class="bg-[#1c2029]">
                         <tr>
                             <th class="tble-primary font-bitcount-grid-double rounded-tl-2xl">ID</th>
@@ -105,12 +123,11 @@ if (isset($_SESSION['alert'])) {
                             <th class="tble-primary font-bitcount-grid-double ">Email</th>
                             <th class="tble-primary font-bitcount-grid-double ">Address</th>
                             <th class="tble-primary font-bitcount-grid-double rounded-tr-2xl">Gender</th>
-
                         </tr>
-
                     </thead>
+                    <!-- -------------------------------------------------TABLE HEAD END--------------------------------------------------------->
 
-
+                    <!-- -------------------------------------------------TABLE BODY START--------------------------------------------------------->
                     <tbody>
 
                     <?php require('pages/display.php') ?>
@@ -129,12 +146,15 @@ if (isset($_SESSION['alert'])) {
                     <?php endforeach; ?>
 
                     </tbody>
+                    <!-- -------------------------------------------------TABLE BODY START------------------------------------------------------->
 
                 </table>
+                <!-- -------------------------------------------------TABLE END------------------------------------------------------------------>
 
             </div>
 
         </section>
+        <!-- -------------------------------------------------TABLE SECTION END------------------------------------------------------------------>
     
     </div>
     
